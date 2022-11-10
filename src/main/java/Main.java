@@ -2,11 +2,10 @@ import java.util.Arrays;
 import java.util.function.Function;
 
 public class Main {
-    static StringBuilder stringBuilder = new StringBuilder("coconut America");
+    static StringBuilder stringBuilder = new StringBuilder("American coconut");
     static Function<String, String> deleteEach = str -> {
-        char first = Character.toLowerCase(str.charAt(0));
-        for (int i = 0; i < str.length(); i++) {
-            if (Character.toLowerCase(str.charAt(i)) == first) {
+        for (int i = 1; i < str.length(); i++) {
+            if (Character.toLowerCase(str.charAt(i)) == Character.toLowerCase(str.charAt(0))) {
                 str = new StringBuilder(str).deleteCharAt(i).toString();
             }
         }
